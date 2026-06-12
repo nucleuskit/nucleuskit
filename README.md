@@ -81,14 +81,3 @@ If the contract changes, the generated surface should make the blast radius visi
 - Put verification near the contract, not at the end of the story.
 
 </details>
-
-<br />
-
-<div align="center">
-  <a href="https://github.com/nucleuskit?tab=repositories">
-    <img alt="Browse repositories" src="https://img.shields.io/badge/Browse%20repositories-161B22?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://github.com/nucleuskit/nucleus">
-    <img alt="Explore the kernel" src="https://img.shields.io/badge/Explore%20the%20kernel-2AFADF?style=for-the-badge&logo=go&logoColor=0D1117" />
-  </a>
-</div>

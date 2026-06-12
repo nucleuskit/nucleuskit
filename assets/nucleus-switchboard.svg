@@ -22,6 +22,9 @@
     <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.2" fill="#2afadf" opacity="0.14"/>
     </pattern>
+    <clipPath id="panelClip">
+      <rect x="14" y="10" width="1172" height="260" rx="22"/>
+    </clipPath>
     <style>
       .mono { font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace; }
       .scan { animation: scan 4.5s ease-in-out infinite; }
@@ -44,14 +47,15 @@
     </style>
   </defs>
   <rect x="14" y="10" width="1172" height="260" rx="22" fill="url(#panel)"/>
+  <g clip-path="url(#panelClip)">
   <rect x="14" y="10" width="1172" height="260" rx="22" fill="url(#dots)"/>
-  <rect x="56" y="48" width="1088" height="2" fill="url(#rail)" opacity=".8" class="scan"/>
+  <rect x="48" y="48" width="280" height="2" fill="url(#rail)" opacity=".8" class="scan"/>
   <g class="mono" transform="translate(68 54)">
     <circle cx="0" cy="0" r="5" fill="#ff6b9a"/>
     <circle cx="18" cy="0" r="5" fill="#f8d66d"/>
     <circle cx="36" cy="0" r="5" fill="#2afadf"/>
     <text x="0" y="42" fill="#8b949e" font-size="15">$ nucleus plan --contract service.yaml</text>
-    <rect x="326" y="27" width="9" height="18" fill="#2afadf" class="cursor"/>
+    <rect x="350" y="27" width="9" height="18" fill="#2afadf" class="cursor"/>
   </g>
   <g transform="translate(84 132)">
     <g class="pulse">
@@ -79,5 +83,6 @@
     <text x="62" fill="#c9d1d9" font-size="13">small kernel online</text>
     <text x="302" fill="#f8d66d" font-size="13">contracts armed</text>
     <text x="540" fill="#ff6b9a" font-size="13">verification watching</text>
+  </g>
   </g>
 </svg>
