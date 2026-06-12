@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Nucleuskit 3D contribution placeholder</title>
+  <desc id="desc">Placeholder displayed until the GitHub Profile 3D Contrib workflow generates the contribution calendar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#172033"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2afadf"/>
+      <stop offset="0.5" stop-color="#f8d66d"/>
+      <stop offset="1" stop-color="#ff6b9a"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace; }
+      .rise { animation: rise 2.8s ease-in-out infinite; }
+      .b2 { animation-delay: 0.18s; }
+      .b3 { animation-delay: 0.36s; }
+      .b4 { animation-delay: 0.54s; }
+      @keyframes rise { 0%, 100% { transform: translateY(0); opacity: 0.55; } 50% { transform: translateY(-18px); opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+  <g transform="translate(150 102)">
+    <rect class="rise" x="0" y="88" width="66" height="66" rx="10" fill="#2afadf" opacity="0.7"/>
+    <rect class="rise b2" x="86" y="58" width="66" height="96" rx="10" fill="#8b5cf6" opacity="0.7"/>
+    <rect class="rise b3" x="172" y="28" width="66" height="126" rx="10" fill="#f8d66d" opacity="0.7"/>
+    <rect class="rise b4" x="258" y="72" width="66" height="82" rx="10" fill="#ff6b9a" opacity="0.7"/>
+  </g>
+  <g class="mono" transform="translate(540 118)">
+    <text x="0" y="0" fill="#2afadf" font-size="24" font-weight="800">3D contribution map warming up</text>
+    <text x="0" y="42" fill="#c9d1d9" font-size="17">The workflow will replace this placeholder with</text>
+    <text x="0" y="72" fill="#c9d1d9" font-size="17">profile-3d-contrib/profile-night-rainbow.svg.</text>
+    <rect x="0" y="106" width="460" height="4" rx="2" fill="url(#bar)"/>
+  </g>
+</svg>

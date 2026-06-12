@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Nucleuskit profile banner</title>
+  <desc id="desc">Animated orbital dashboard for Nucleuskit, an AI-first Go microservice kernel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.52" stop-color="#eef8f7"/>
+      <stop offset="1" stop-color="#fff8ea"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.18" stop-color="#1fb8a8"/>
+      <stop offset="0.62" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1fb8a8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#1fb8a8" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#1fb8a8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.12 0 0 0 0 0.72 0 0 0 0 0.66 0 0 0 0.55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1fb8a8" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+    <style>
+      .mono { font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace; }
+      .orbit { transform-origin: 274px 180px; animation: spin 18s linear infinite; }
+      .orbit2 { transform-origin: 274px 180px; animation: spin 26s linear infinite reverse; }
+      .blink { animation: blink 1.1s steps(2, start) infinite; }
+      .pulse { animation: pulse 2.8s ease-in-out infinite; }
+      .scan { animation: scan 5s ease-in-out infinite; }
+      .float { animation: float 6s ease-in-out infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes blink { 50% { opacity: 0.18; } }
+      @keyframes pulse { 0%, 100% { opacity: 0.48; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+      @keyframes scan { 0%, 100% { transform: translateX(-180px); opacity: 0; } 20%, 70% { opacity: 1; } 90% { transform: translateX(660px); opacity: 0; } }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
+  <circle cx="990" cy="42" r="170" fill="#ff5c8a" opacity="0.14"/>
+  <circle cx="1060" cy="326" r="210" fill="#1fb8a8" opacity="0.14"/>
+  <path d="M38 298 C210 230 360 336 534 250 S870 186 1160 260" fill="none" stroke="#d69b00" stroke-opacity="0.3" stroke-width="2"/>
+  <g filter="url(#glow)" class="float">
+    <circle cx="274" cy="180" r="72" fill="url(#core)" opacity="0.9"/>
+    <circle cx="274" cy="180" r="32" fill="#ffffff" stroke="#1fb8a8" stroke-width="2"/>
+    <circle cx="274" cy="180" r="8" fill="#d69b00" class="pulse"/>
+  </g>
+  <g fill="none" stroke="#1fb8a8" stroke-opacity="0.62">
+    <ellipse cx="274" cy="180" rx="134" ry="58" stroke-width="1.4"/>
+    <ellipse cx="274" cy="180" rx="154" ry="78" stroke-width="1" transform="rotate(-24 274 180)"/>
+    <ellipse cx="274" cy="180" rx="172" ry="92" stroke-width="1" transform="rotate(24 274 180)"/>
+  </g>
+  <g class="orbit">
+    <circle cx="408" cy="180" r="8" fill="#1fb8a8"/>
+    <circle cx="140" cy="180" r="4" fill="#d69b00"/>
+  </g>
+  <g class="orbit2">
+    <circle cx="274" cy="88" r="5" fill="#ff5c8a"/>
+    <circle cx="274" cy="272" r="6" fill="#4f46e5"/>
+  </g>
+  <g transform="translate(530 72)">
+    <text class="mono" x="0" y="0" fill="#667085" font-size="18" letter-spacing="3">PROFILE://NUCLEUSKIT</text>
+    <text class="mono" x="0" y="62" fill="#101828" font-size="62" font-weight="800">nucleuskit</text>
+    <rect x="0" y="82" width="585" height="2" fill="url(#beam)" class="scan"/>
+    <text class="mono" x="0" y="122" fill="#0b9186" font-size="24" font-weight="700">AI-first Go microservice kernel</text>
+    <text class="mono" x="0" y="164" fill="#344054" font-size="19">contract-driven service generation</text>
+    <text class="mono" x="0" y="195" fill="#344054" font-size="19">evolution and verification for backend systems</text>
+    <g transform="translate(0 226)">
+      <rect x="0" y="0" width="122" height="36" rx="18" fill="#1fb8a8" fill-opacity="0.14" stroke="#1fb8a8" stroke-opacity="0.68"/>
+      <rect x="140" y="0" width="158" height="36" rx="18" fill="#d69b00" fill-opacity="0.14" stroke="#d69b00" stroke-opacity="0.68"/>
+      <rect x="316" y="0" width="132" height="36" rx="18" fill="#ff5c8a" fill-opacity="0.14" stroke="#ff5c8a" stroke-opacity="0.68"/>
+      <text class="mono" x="24" y="24" fill="#0b9186" font-size="14" font-weight="700">Go Core</text>
+      <text class="mono" x="164" y="24" fill="#a57200" font-size="14" font-weight="700">Contracts</text>
+      <text class="mono" x="338" y="24" fill="#d92d66" font-size="14" font-weight="700">Verify</text>
+    </g>
+  </g>
+  <g class="mono" transform="translate(74 54)" opacity="0.92">
+    <rect width="322" height="72" rx="14" fill="#ffffff" stroke="#d0d5dd"/>
+    <circle cx="26" cy="24" r="5" fill="#ff5c8a"/>
+    <circle cx="44" cy="24" r="5" fill="#d69b00"/>
+    <circle cx="62" cy="24" r="5" fill="#1fb8a8"/>
+    <text x="24" y="55" fill="#667085" font-size="14">$ nucleus generate service</text>
+    <rect x="244" y="43" width="9" height="17" fill="#1fb8a8" class="blink"/>
+  </g>
+</svg>
