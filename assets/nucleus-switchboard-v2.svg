@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">Nucleuskit command switchboard</title>
+  <desc id="desc">Command switchboard showing contract, generation, verification, and runtime modules.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#15121f"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2afadf"/>
+      <stop offset="0.5" stop-color="#f8d66d"/>
+      <stop offset="1" stop-color="#ff6b9a"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#2afadf" opacity="0.14"/>
+    </pattern>
+    <clipPath id="panelClip">
+      <rect x="14" y="10" width="1172" height="260" rx="22"/>
+    </clipPath>
+    <style>
+      .mono { font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace; }
+      .scan { animation: scan 4.8s ease-in-out infinite; }
+      .card1 { animation: pulse 2.8s ease-in-out infinite; }
+      .card2 { animation: pulse 2.8s ease-in-out .35s infinite; }
+      .card3 { animation: pulse 2.8s ease-in-out .7s infinite; }
+      .cursor { animation: blink 1s steps(2, start) infinite; }
+      @keyframes scan {
+        0%, 100% { transform: translateX(-340px); opacity: 0; }
+        18%, 76% { opacity: .85; }
+        92% { transform: translateX(1160px); opacity: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: .76; }
+        50% { opacity: 1; }
+      }
+      @keyframes blink { 50% { opacity: .18; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <rect x="14" y="10" width="1172" height="260" rx="22" fill="url(#panel)"/>
+  <g clip-path="url(#panelClip)">
+    <rect x="14" y="10" width="1172" height="260" rx="22" fill="url(#dots)"/>
+    <rect x="40" y="48" width="360" height="2" fill="url(#rail)" opacity=".8" class="scan"/>
+
+    <circle cx="82" cy="74" r="5" fill="#ff6b9a"/>
+    <circle cx="100" cy="74" r="5" fill="#f8d66d"/>
+    <circle cx="118" cy="74" r="5" fill="#2afadf"/>
+    <text class="mono" x="82" y="116" fill="#8b949e" font-size="15">$ nucleus plan --contract service.yaml</text>
+    <rect x="432" y="101" width="9" height="18" fill="#2afadf" class="cursor"/>
+
+    <g class="card1">
+      <rect x="100" y="154" width="300" height="72" rx="14" fill="#0b141c" stroke="#2afadf" stroke-opacity=".55"/>
+      <text class="mono" x="126" y="185" fill="#2afadf" font-size="15" font-weight="800">CONTRACT</text>
+      <text class="mono" x="126" y="208" fill="#c9d1d9" font-size="13">intent before wiring</text>
+    </g>
+
+    <g class="card2">
+      <rect x="450" y="154" width="300" height="72" rx="14" fill="#151407" stroke="#f8d66d" stroke-opacity=".58"/>
+      <text class="mono" x="476" y="185" fill="#f8d66d" font-size="15" font-weight="800">GENERATE</text>
+      <text class="mono" x="476" y="208" fill="#c9d1d9" font-size="13">predictable surfaces</text>
+    </g>
+
+    <g class="card3">
+      <rect x="800" y="154" width="300" height="72" rx="14" fill="#190f18" stroke="#ff6b9a" stroke-opacity=".6"/>
+      <text class="mono" x="826" y="185" fill="#ff6b9a" font-size="15" font-weight="800">VERIFY + RUN</text>
+      <text class="mono" x="826" y="208" fill="#c9d1d9" font-size="13">http | grpc | worker</text>
+    </g>
+
+    <g fill="none" stroke="url(#rail)" stroke-width="2" opacity=".52" filter="url(#glow)">
+      <path d="M400 190 H450"/>
+      <path d="M750 190 H800"/>
+    </g>
+
+    <text class="mono" x="82" y="254" fill="#2afadf" font-size="13" font-weight="800">status:</text>
+    <text class="mono" x="144" y="254" fill="#c9d1d9" font-size="13">small kernel online</text>
+    <text class="mono" x="370" y="254" fill="#f8d66d" font-size="13">contracts armed</text>
+    <text class="mono" x="600" y="254" fill="#ff6b9a" font-size="13">verification watching</text>
+  </g>
+</svg>

@@ -27,7 +27,7 @@
 <br />
 
 <div align="center">
-  <img alt="Nucleuskit command switchboard" src="./assets/nucleus-switchboard.svg" width="100%" />
+  <img alt="Nucleuskit command switchboard" src="./assets/nucleus-switchboard-v2.svg" width="100%" />
 </div>
 
 <br />
