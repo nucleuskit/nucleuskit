@@ -39,8 +39,8 @@
         92% { transform: translateX(1010px); opacity: 0; }
       }
       @keyframes pulse {
-        0%, 100% { opacity: .52; transform: translateY(0); }
-        50% { opacity: 1; transform: translateY(-4px); }
+        0%, 100% { opacity: .68; }
+        50% { opacity: 1; }
       }
       @keyframes blink { 50% { opacity: .18; } }
       @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
